@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background-colo: #2a54fe;
+  --cor: #e5ecff;
+  --border-cor: #ffff;
+  --cor-painel: #4785ff;
+  --cor-color: #e5ecff;
+}
+body {
+  background: var(--background-colo);
+  display: flex;
+  flex-direction: column;
+  color: var(--cor);
+  font-family: lexend;
+  max-width: 1440px;
+  width: 100%;
+
+  align-items: center;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid var(--border-cor) 0.1px;
+  padding: 20px;
+  font-size: 14px;
+  overflow: hidden;
+  width: 100%;
+}
+
+nav .button_toogle,
+.button_opePainel {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hero {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-bottom: solid var(--border-cor) 0.1px;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+  overflow: hidden;
+  padding: 20px;
+}
+header h1 {
+  font-size: 60px;
+}
+header p {
+  margin-top: 1rem;
+  font-size: 14px;
+}
+.divisoria section {
+  width: 50%;
+  border: solid var(--border-cor) 0.1px;
+  border-top: none;
+  padding: 20px;
+}
+.divisoria {
+  display: flex;
+  flex-wrap: wrap;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 260px;
+}
+main p {
+  font-size: 14px;
+}
+.paragrafo {
+  font-size: 17px;
+}
+
+footer {
+  border: solid var(--border-cor) 0.1px;
+  border-top: none;
+  width: 100%;
+  padding: 15px;
+  overflow: hidden;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.painel_menup {
+  margin-top: 50px;
+}
+.painel_menu {
+  position: absolute;
+  top: 68px;
+  right: 4px;
+  padding: 0 300px 472px 300px;
+  background: var(--background-colo);
+  overflow: hidden;
+}
+.close_painel {
+  display: none;
+}
+.painel_menu a {
+  text-decoration: none;
+}
+.centro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.painel_menu a,
+.painel_menu p {
+  font-size: 20px;
+  color: var(--cor);
+}
+section:hover {
+  background-color: var(--cor-painel);
+}
+.painel_menu a:hover {
+  border-bottom: solid var(--cor-painel) 2px;
+}
+footer a {
+  color: #000;
+}
+@media (max-width: 1920px) {
+  body {
+    max-width: 1920px;
+  }
+  header {
+    width: 28%;
+    padding: 50px;
+  }
+
+  .divisoria section {
+    padding: 26px;
+  }
+  section:nth-child(even) {
+    border-right: none;
+  }
+  footer {
+    border: none;
+    align-items: center;
+  }
+}
+@media (max-width: 390px) {
+  body {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+    max-width: 500px;
+  }
+  header h1 {
+    font-size: 40px;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    width: 100%;
+  }
+  .divisoria {
+    display: flex;
+    flex-direction: column;
+    border-top: solid var(--border-cor) 1px;
+  }
+  .divisoria section {
+    max-width: 500px;
+
+    width: 100%;
+    border-left: 0;
+    border-right: 0;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
